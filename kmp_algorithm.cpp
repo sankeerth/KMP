@@ -41,11 +41,11 @@ int perform_kmp(char *text, char *word)
 			    	index++;
 			}
 		} else {
-            if (table[index] > -1) {
-                match = match + index - table[index];
-                index = table[index];
+            		if (table[index] > -1) {
+                		match = match + index - table[index];
+                		index = table[index];
 			} else {
-                match = match + 1;
+                		match = match + 1;
 				index = 0;
 			}
 		}
