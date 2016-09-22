@@ -10,14 +10,14 @@ int compute_kmp_table(char *word, int *table, int word_length)
 
 	while (pos < word_length) {
 		if (word[pos-1] == word[cur]) {
-			cur = cur + 1;
-            table[pos] = cur;
-			pos++;
+		   	cur = cur + 1;
+            		table[pos] = cur;
+		    	pos++;
 		} else if (cur > 0) {
-			cur = table[cur];
+		    	cur = table[cur];
 		} else {
-            table[pos] = 0;
-			pos++;
+            	    	table[pos] = 0;
+		    	pos++;
 		}
 	}
 }
@@ -38,7 +38,7 @@ int perform_kmp(char *text, char *word)
 			if (index == (word_length-1)) {
 				return match;
 			} else {
-				index++;
+			    	index++;
 			}
 		} else {
             if (table[index] > -1) {
